@@ -3,6 +3,7 @@ package com.example.overweights.ui.intro;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.example.overweights.R;
 import com.example.overweights.databinding.ActivityIntroBinding;
 import com.example.overweights.databinding.ActivityLoginBinding;
+import com.example.overweights.ui.chooseZone.ChooseZoneActivity;
 
 public class IntroActivity extends AppCompatActivity {
     ActivityIntroBinding binding;
@@ -46,7 +48,7 @@ public class IntroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 position++;
                 if(position>2){
-                    Toast.makeText(IntroActivity.this, "nhảy trang", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(IntroActivity.this, ChooseZoneActivity.class));
                 }else{
                     addDotssIndicator(position);
                     binding.imgSlide.setImageResource(slide_images[position]);
@@ -60,7 +62,7 @@ public class IntroActivity extends AppCompatActivity {
         binding.txtSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(IntroActivity.this, "nhảy", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(IntroActivity.this, ChooseZoneActivity.class));
             }
         });
 
