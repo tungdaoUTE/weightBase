@@ -29,8 +29,6 @@ public class SplashActivity extends AppCompatActivity {
         final Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                SharedPreferences getpre = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                boolean isfirtstart = getpre.getBoolean("firststart", true);
                 try {
                     sleep(3000);
                     SharedPreferences getpre= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
