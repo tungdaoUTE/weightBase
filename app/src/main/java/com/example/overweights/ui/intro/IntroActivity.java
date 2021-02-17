@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
@@ -33,6 +35,9 @@ public class IntroActivity extends AppCompatActivity {
 
     private TextView[] mdots;
     int position = 0;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +53,11 @@ public class IntroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 position++;
                 if(position>2){
+                    SharedPreferences getpre= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                    boolean isfirtstart=getpre.getBoolean("firststart",true);
+                    SharedPreferences.Editor e=getpre.edit();
+                    e.putBoolean("firststart",false);
+                    e.apply();
                     startActivity(new Intent(IntroActivity.this, ChooseZoneActivity.class));
                 }else{
                     addDotssIndicator(position);
@@ -62,6 +72,11 @@ public class IntroActivity extends AppCompatActivity {
         binding.txtSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences getpre= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean isfirtstart=getpre.getBoolean("firststart",true);
+                SharedPreferences.Editor e=getpre.edit();
+                e.putBoolean("firststart",false);
+                e.apply();
                 startActivity(new Intent(IntroActivity.this, ChooseZoneActivity.class));
             }
         });
