@@ -2,6 +2,7 @@ package com.example.overweights.ui.chooseZone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -60,10 +61,17 @@ public class ChooseZoneActivity extends AppCompatActivity {
             }
         });
 
+        binding.btnnext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseZoneActivity.this,ChooseZone2Activity.class));
+            }
+        });
+
     }
 
     public void resetAll(){
-        binding.imgChoose.setImageResource(R.drawable.imgdefault);
+//        binding.imgChoose.setImageResource(R.drawable.imgdefault);
 
         binding.btnButt.setTextColor(Color.parseColor("#C3C7DB"));
         binding.btnButt.setBackgroundResource(R.drawable.bg_button);
