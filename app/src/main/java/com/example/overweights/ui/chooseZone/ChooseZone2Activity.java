@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.example.overweights.R;
 import com.example.overweights.databinding.ActivityChooseZone2Binding;
+import com.example.overweights.ui.MainPage.MainPageActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,19 +51,20 @@ public class ChooseZone2Activity extends AppCompatActivity {
         binding.spWeight.setAdapter(adapterCurentWeight_kg);
 
         buttonEvent();
+        binding.spWeight.setPrompt("khg");
 
 
     }
 
     private void createData() {
         for (int i = 0; i < 200; i++) {
-            mapHeight_cm.add(i + " cm");
-            mapCurentWeight_kg.add( i + " kg");
-            mapTargetWeight_kg.add(i + " kg");
+            mapHeight_cm.add(""+i);
+            mapCurentWeight_kg.add( i + "");
+            mapTargetWeight_kg.add(i + "");
 
-            mapHeight_ft.add(i + " ft");
-            mapCurentWeight_ib.add( i + " ib");
-            mapTargetWeight_ib.add(i + " ib");
+            mapHeight_ft.add(i + "");
+            mapCurentWeight_ib.add( i + "");
+            mapTargetWeight_ib.add(i + "");
 
             adapterHeight_cm = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,mapHeight_cm);
             adapterCurentWeight_kg = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,mapCurentWeight_kg);
@@ -110,6 +112,14 @@ public class ChooseZone2Activity extends AppCompatActivity {
                 startActivity(new Intent(ChooseZone2Activity.this, ChooseZoneActivity.class));
             }
         });
+
+        binding.btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseZone2Activity.this, MainPageActivity.class));
+            }
+        });
+
     }
 
     public void resetAll() {
