@@ -79,13 +79,14 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="-1dp"
-                app:srcCompat="@drawable/banner30day" />
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/killercorehitbeginner" />
 
             <TextView
                 android:id="@+id/textView17"

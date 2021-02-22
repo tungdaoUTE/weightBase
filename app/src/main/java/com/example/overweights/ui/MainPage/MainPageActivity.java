@@ -58,7 +58,8 @@ public class MainPageActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.nav_discover:
-                    Toast.makeText(MainPageActivity.this, "discover", Toast.LENGTH_SHORT).show();
+                    fragment = new DiscoverFragment();
+                    loadFragment(fragment);
                     return true;
                 case R.id.nav_report:
                     Toast.makeText(MainPageActivity.this, "report", Toast.LENGTH_SHORT).show();
