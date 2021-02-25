@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#272A3D"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -161,7 +160,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
