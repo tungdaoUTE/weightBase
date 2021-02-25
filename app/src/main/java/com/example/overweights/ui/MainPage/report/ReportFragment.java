@@ -27,7 +27,7 @@ public class ReportFragment extends Fragment {
         binding = FragmentReportBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        TabFragmentAdapter adapter = new TabFragmentAdapter(getFragmentManager());
+        TabFragmentAdapter adapter = new TabFragmentAdapter(getChildFragmentManager());
         adapter.addFragment(CalendarFragment.newInstance(), "Calendar");
         adapter.addFragment(DataFragment.newInstance(), "Data");
         binding.viewPager.setAdapter(adapter);
@@ -53,10 +53,10 @@ public class ReportFragment extends Fragment {
             //see https://developer.android.com/reference/android/support/v4/view/ViewPager.OnPageChangeListener
             @Override
             public void onPageScrolled(int i, float positionOffset, int positionOffsetPx) {
-                FrameLayout.LayoutParams params = (FrameLayout.LayoutParams)binding.indicator.getLayoutParams();
+                FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) binding.indicator.getLayoutParams();
 
                 //Multiply positionOffset with indicatorWidth to get translation
-                float translationOffset =  (positionOffset+i) * indicatorWidth ;
+                float translationOffset = (positionOffset + i) * indicatorWidth;
                 params.leftMargin = (int) translationOffset;
                 binding.indicator.setLayoutParams(params);
             }
@@ -74,4 +74,5 @@ public class ReportFragment extends Fragment {
 
         return root;
     }
+
 }
