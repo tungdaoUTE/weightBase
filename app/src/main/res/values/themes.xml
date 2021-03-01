@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.OverWeights" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.OverWeights" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/font_framily</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -17,5 +17,10 @@
     <style name="circleImageViewStyle" >
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/font_framily</item>
+        <item name="android:buttonStyle">@style/Theme.AppCompat.DayNight</item>
     </style>
 </resources>
