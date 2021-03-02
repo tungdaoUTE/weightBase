@@ -3,29 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- regular -->
     <font
-        android:font="@font/helveticaneue"
+        android:font="@font/helveticaneuemedium"
         android:fontStyle="normal"
-        android:fontWeight="300"
-
-        app:font="@font/helveticaneue"
-        app:fontStyle="normal"
-        app:fontWeight="300" />
-    <font
-        android:font="@font/helveticaneue"
-        android:fontStyle="italic"
-        android:fontWeight="300"
-
-        app:font="@font/helveticaneuemedium"
-        app:fontStyle="italic"
-        app:fontWeight="300" />
+        android:fontWeight="300" />
     <font
         android:font="@font/helveticaneuemedium"
         android:fontStyle="normal"
-        android:fontWeight="300"
-
-        app:font="@font/helveticabold"
-        app:fontStyle="normal"
-        app:fontWeight="300" />
+        android:fontWeight="300" />
+    <font
+        android:font="@font/helveticabold"
+        android:fontStyle="italic"
+        android:fontWeight="500" />
 
     <!-- italic -->
 </font-family>

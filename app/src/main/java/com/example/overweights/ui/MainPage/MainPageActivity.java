@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.overweights.R;
 import com.example.overweights.databinding.ActivityMainPageBinding;
 import com.example.overweights.ui.MainPage.report.ReportFragment;
+import com.example.overweights.ui.MainPage.settings.SettingFragment;
 import com.example.overweights.utils.BottomNavigationBehavior;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -67,6 +68,8 @@ public class MainPageActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.nav_setting:
+                    fragment = new SettingFragment();
+                    loadFragment(fragment);
                     return true;
             }
             return false;

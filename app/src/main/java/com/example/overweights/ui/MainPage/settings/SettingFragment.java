@@ -9,11 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.overweights.databinding.FragmentDiscoverBinding;
+import com.example.overweights.databinding.FragmentSettingsBinding;
+
 public class SettingFragment extends Fragment {
+    FragmentSettingsBinding binding;
+
+    public SettingFragment() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
     }
 }
