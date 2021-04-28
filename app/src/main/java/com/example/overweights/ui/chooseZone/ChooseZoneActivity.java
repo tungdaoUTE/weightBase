@@ -64,7 +64,7 @@ public class ChooseZoneActivity extends AppCompatActivity {
         binding.btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseZoneActivity.this,ChooseZone2Activity.class));
+                startActivity(new Intent(ChooseZoneActivity.this,ChooseZone3Activity.class));
             }
         });
 

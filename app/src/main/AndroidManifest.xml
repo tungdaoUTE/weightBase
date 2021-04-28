@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OverWeights">
-        <activity android:name=".ui.MainPage.MainPageActivity"></activity>
+        <activity android:name=".ui.chooseZone.ChooseZone3Activity"></activity>
+        <activity android:name=".ui.MainPage.MainPageActivity" />
         <activity android:name=".ui.chooseZone.ChooseZone2Activity" />
         <activity android:name=".ui.chooseZone.ChooseZoneActivity" />
         <activity android:name=".ui.intro.IntroActivity" />
